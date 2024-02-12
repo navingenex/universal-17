@@ -34,7 +34,10 @@
             ],
             "scripts": [],
             "server": "src/main.server.ts",
-            "prerender": true,
+            "prerender": {
+              "discoverRoutes": true,
+              "routesFile": "robots.txt"
+            },
             "ssr": {
               "entry": "server.ts"
             }
@@ -99,8 +102,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
